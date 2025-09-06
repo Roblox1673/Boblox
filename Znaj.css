@@ -1,0 +1,83 @@
+/* Ogólne tło i kontener */
+.znaj-body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.znaj-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Formularz dodawania znajomego */
+.add-friend-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.add-friend-form input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.add-friend-form .add-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff4757;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-friend-form .add-btn:hover {
+  background-color: #e84118;
+}
+
+/* Lista znajomych */
+.friends-list h2 {
+  margin-bottom: 15px;
+}
+
+.friends-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Pojedynczy znajomy */
+.friend-item {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+}
+
+.friend-item:hover {
+  background-color: #e6e6e6;
+}
+
+.friend-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.friend-name {
+  font-weight: bold;
+  font-size: 16px;
+}

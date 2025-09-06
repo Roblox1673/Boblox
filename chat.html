@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Boblox - Chat</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg" type="image/jpg">
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body onload="initChat()">
+
+  <header>
+    <h1>Chat z znajomymi</h1>
+    <button onclick="logout()">Wyloguj</button>
+  </header>
+
+  <main>
+    <aside>
+      <h2>Znajomi</h2>
+      <div id="friends-container"></div>
+    </aside>
+
+    <section id="chat-section">
+      <div id="chat-header">
+        <span id="chat-with">Wybierz znajomego, aby rozmawiać</span>
+      </div>
+      <div id="chat-messages"></div>
+      <div id="chat-input">
+        <input type="text" id="message-input" placeholder="Napisz wiadomość...">
+        <button onclick="sendMessage()">Wyślij</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>

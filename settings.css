@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f2f2f2;
+}
+
+.settings-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Lewa kolumna z zakładkami */
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.tab {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.tab:hover, .tab.active {
+  background-color: #444;
+}
+
+.tab i {
+  margin-right: 10px;
+}
+
+/* Prawa kolumna z treścią ustawień */
+.content {
+  flex: 1;
+  background-color: #fff;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.content h3 {
+  margin-top: 0;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.setting input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.setting button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00a2ff;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.setting button:hover {
+  background-color: #007acc;
+}

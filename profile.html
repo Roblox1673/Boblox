@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Boblox - Profile</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg" type="image/jpg">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="app-body">
+  <!-- Top bar (jak w Roblox) -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">ROBLOX</div>
+      <input class="search" placeholder="Search" />
+      <div class="top-actions">
+        <div id="search-result" class="user-card hidden"></div>
+        <span class="robux">R$ 10</span>
+        <button class="btn small" onclick="logout()">Wyloguj</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Główny nagłówek profilu -->
+    <section class="profile-header card">
+      <div class="avatar-wrap">
+        
+          <img src="https://www.creativefabrica.com/wp-content/uploads/2022/11/04/Roblox-Man-Face-Graphic-44809116-1.png">
+        </div>
+      </div>
+
+      <div class="identity">
+        <h1 id="displayName">Loading...</h1>
+        <div class="handle" id="handle">@loading</div>
+
+        <div class="action-row">
+          <button class="btn primary">Add Friend</button>
+          <button class="btn outline">Follow</button>
+          <button class="btn outline danger">Block</button>
+          <button class="btn outline">Message</button>
+        </div>
+      </div>
+
+      <div class="numbers">
+        <div class="num-box">
+          <div class="num" id="friendsCount">0</div>
+          <div class="caption">Friends</div>
+        </div>
+        <div class="num-box">
+          <div class="num" id="followersCount">0</div>
+          <div class="caption">Followers</div>
+        </div>
+        <div class="num-box">
+          <div class="num" id="followingCount">0</div>
+          <div class="caption">Following</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="layout-2col">
+      <!-- Lewa kolumna -->
+      <aside class="col-left">
+        <section class="card about-card">
+          <h2>About</h2>
+          <p id="about">Hi, I’m on Roblox Clone 😎</p>
+        </section>
+
+        <section class="card stats-card">
+          <h2>Statistics</h2>
+          <ul class="stats-list">
+            <li><span class="label">Join Date</span><span class="value" id="joinDate">--/--/----</span></li>
+            <li><span class="label">Place Visits</span><span class="value" id="placeVisits">1</span></li>
+            <li><span class="label">Forum Posts</span><span class="value">0</span></li>
+            <li><span class="label">Followers</span><span class="value" id="followersCount2">0</span></li>
+          </ul>
+        </section>
+        <h2>Forum</h2>
+<div id="forum-messages" class="forum-messages"></div>
+<div class="forum-input">
+  <textarea id="forum-text" placeholder="Napisz wiadomość..."></textarea>
+  <button onclick="sendForumMessage()">Wyślij</button>
+</div>
+
+      </aside>
+
+      <!-- Prawa kolumna -->
+      <section class="col-right">
+        <section class="card experiences-card">
+          <div class="card-header">
+          <h2>Experiences</h2>
+          <a class="see-all" href="#">See All</a>
+          </div>
+
+          <div class="exp-grid">                                                   
+            <div class="exp-item">
+              <div class="thumb fake-thumb"></div>                          
+              <div class="exp-title" id="gameTitle">User's Place 1</div>       
+              <div class="exp-stats">
+                <span class="exp-players">0</span>
+                <span class="exp-likes">0%</span>
+                <div class="place-button-container">
+  <button class="play-button">Play</button>
+  <a href="GameClassic3D.exe" download class="play-button">Downloads</a>
+</div>
+              </div>
+            </div>
+            <div class="exp-item">
+  <div class="thumb">
+    <div class="exp-item">
+              <div class="thumb fake-thumb"></div>
+  <div class="exp-title" id="gameTitle2">User's Place 2</div>
+  <div class="exp-stats">
+    <span class="exp-players">0</span>
+    <span class="exp-likes">0%</span>
+  </div>
+  <div class="place-button-container">
+    <button class="play-button">Play</button>
+  </div>
+</div>
+
+          </div>
+        </section>
+
+        <section class="card groups-card">
+          <div class="card-header">
+            <h2>Groups</h2>
+            <a class="see-all" href="#">See All</a>
+          </div>
+          <div class="exp-grid">
+            <div class="exp-item">
+              <div class="thumb fake-thumb"></div>
+              <div class="exp-title" id="gameTitle">Team Roblox</div>
+              <div class="exp-stats">
+                <span class="exp-players">100</span>
+                <span class="exp-likes">100%</span>
+                <div class="place-button-container">
+                <button class="play-button">Attached</button>
+                
+</div>  
+        </section>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2025 Roblox</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    guardProfile();
+    fillProfile();
+  </script>
+</body>
+</html>
+<div class="side-ad left-ad">
+  <img src="https://images.rbxcdn.com/076d146437ffc79cebc36bf2ded91196" alt="Reklama Biedronka Lewa">
+</div>
+
+<div class="side-ad right-ad">
+  <img src="https://images.rbxcdn.com/076d146437ffc79cebc36bf2ded91196" alt="Reklama Biedronka Prawa">
+</div>

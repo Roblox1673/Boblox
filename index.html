@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Boblox - Logowanie</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg" type="image/jpg">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-body">
+  <div class="auth-card">
+    <div class="logo">ROBLOX</div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="login">Logowanie</button>
+      <button class="tab" data-tab="register">Rejestracja</button>
+    </div>
+
+<div class="tab-content active" id="login">
+      <label>Nazwa użytkownika</label>
+      <input id="login-username" placeholder="np. arex23" autocomplete="username" />
+      <label>Hasło</label>
+      <input id="login-password" type="password" placeholder="••••••••" autocomplete="current-password" />
+      <button class="btn primary" onclick="login()">Zaloguj</button>
+      <button class="btn reset" onclick="resetPassword()">Zapomniałeś hasła?</button>
+    </div>
+
+    <div class="tab-content" id="register">
+      <label>Nazwa użytkownika</label>
+      <input id="reg-username" placeholder="np. arex23" autocomplete="username" />
+      <label>Hasło</label>
+      <input id="reg-password" type="password" placeholder="••••••••" autocomplete="new-password" />
+      <button class="btn success" onclick="registerUser()">Zarejestruj</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="server.js"></script>
+  <script>
+    initAuthPage();
+  </script>
+</body>
+</html>

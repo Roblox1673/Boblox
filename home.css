@@ -1,0 +1,296 @@
+/* Reset i podstawowe style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+/* Pasek boczny */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #333;
+}
+
+/* Główny kontent */
+.main {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+/* Górny pasek */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info .username {
+    font-weight: bold;
+}
+
+.user-info .avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #555;
+    border-radius: 50%;
+}
+
+/* Siatka gier */
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.game-card {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-card img {
+    width: 100%;
+    display: block;
+}
+
+.game-card h3 {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+.play-btn {
+    display: block;
+    width: 80%;
+    margin: 10px auto 15px auto; /* wyśrodkowanie i odstęp */
+    padding: 8px 0;
+    background-color: #4caf50; /* zielony jak w Roblox */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.play-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+/* Górny pasek */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Pole wyszukiwania */
+.search-box {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+}
+
+/* Sekcja Robux */
+.currency {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+.robux-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /* biała ikona na ciemnym tle */
+}
+
+.robux-amount {
+    font-size: 16px;
+}
+
+/* Avatar + wyloguj */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info .avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #555;
+    border-radius: 50%;
+}
+
+/* Przycisk wylogowania */
+.logout-btn {
+    padding: 6px 12px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #c9302c;
+    transform: scale(1.05);
+}
+.add-friend-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ff4757;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
+
+.add-friend-circle img.friend-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+.add-friend-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ff4757;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+  text-decoration: none; /* usuwa podkreślenie linku */
+}
+
+.add-friend-circle img.friend-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+.admin-panel {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 450px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin: 20px auto;
+}
+
+.admin-panel h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.admin-panel input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.admin-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.admin-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff4757;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admin-btn:hover {
+  background-color: #e84118;
+}
+
+.admin-log {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #faf8f8;
+  border-radius: 10px;
+  min-height: 60px;
+  font-size: 14px;
+  overflow-y: auto;
+}

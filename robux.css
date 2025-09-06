@@ -1,0 +1,161 @@
+/* Podstawowe style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #333;
+}
+
+/* Main */
+.main {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info .username {
+    font-weight: bold;
+}
+
+.user-info .avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #555;
+    border-radius: 50%;
+}
+
+/* Pakiety Robux */
+.packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.package {
+    background: linear-gradient(145deg, #222, #1f1f1f);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.package:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.8);
+}
+
+.amount {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.r-icon {
+    margin-left: 8px;
+    font-size: 1.3rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.buy-btn {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: #00b06f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.buy-btn:hover {
+    background-color: #00925d;
+    transform: scale(1.05);
+}
+
+.popular {
+    border: 2px solid #00b06f;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #00b06f;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Boblox - Avatar</title>
+    <link rel="stylesheet" href="avatar.css">
+</head>
+<body>
+    <header>
+        <h1>Edytor Avatara Roblox</h1>
+    </header>
+
+    <main>
+        <div id="avatar-container">
+            <div id="avatar">
+                <img id="legs" class="part" src="https://www.creativefabrica.com/wp-content/uploads/2022/11/04/Roblox-Man-Face-Graphic-44809116-1.png">
+            </div>
+        </div>
+
+        <div id="editor">
+            <div class="category">
+                <h2>Włosy</h2>
+                <button onclick="changePart('hair', 'parts/hair1.png')">Krótki</button>
+                <button onclick="changePart('hair', 'parts/hair2.png')">Długi</button>
+                <button onclick="changePart('hair', 'parts/hair3.png')">Kucyk</button>
+            </div>
+
+            <div class="category">
+                <h2>Ubrania</h2>
+                <button onclick="changePart('body', 'parts/body1.png')">Niebieski T-shirt</button>
+                <button onclick="changePart('body', 'parts/body2.png')">Czerwony T-shirt</button>
+                <button onclick="changePart('body', 'parts/body3.png')">Zielona Bluza</button>
+            </div>
+
+            <div class="category">
+                <h2>Nogi</h2>
+                <button onclick="changePart('legs', 'parts/legs1.png')">Spodnie czarne</button>
+                <button onclick="changePart('legs', 'parts/legs2.png')">Spodnie niebieskie</button>
+                <button onclick="changePart('legs', 'parts/legs3.png')">Spodnie czerwone</button>
+            </div>
+
+            <div class="category">
+                <h2>Akcesoria</h2>
+                <button onclick="changePart('accessory', 'parts/hat1.png')">Kapelusz</button>
+                <button onclick="changePart('accessory', 'parts/hat2.png')">Korona</button>
+                <button onclick="changePart('accessory', '')">Brak</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="avatar.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boblox - Settings</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg" type="image/jpg">
+  <link rel="stylesheet" href="settings.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="settings-container">
+    <!-- Lewa kolumna -->
+    <div class="sidebar">
+      <h2>Ustawienia</h2>
+      <div class="tab active"><i class="fas fa-user"></i> Konto</div>
+      <div class="tab"><i class="fas fa-lock"></i> Prywatność</div>
+      <div class="tab"><i class="fas fa-bell"></i> Powiadomienia</div>
+      <div class="tab"><i class="fas fa-cog"></i> Ogólne</div>
+    </div>
+
+    <!-- Prawa kolumna -->
+    <div class="content">
+      <h3>Konto</h3>
+      <div class="setting">
+        <span>Nazwa użytkownika</span>
+        <input type="text" value="Wpisz">
+      </div>
+      <div class="setting">
+        <span>Email</span>
+        <input type="email" value="Wpisz">
+      </div>
+      <div class="setting">
+        <span>Hasło</span>
+        <input type="password" value="Wpisz>
+      </div>
+      <div class="setting">
+        <button>Zapisz zmiany</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Prosta zmiana aktywnej zakładki
+    const tabs = document.querySelectorAll('.tab');
+    const content = document.querySelector('.content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        content.innerHTML = `<h3>${tab.textContent.trim()}</h3><p>Tu będą ustawienia dla ${tab.textContent.trim()}.</p>`;
+      });
+    });
+  </script>
+</body>
+</html>

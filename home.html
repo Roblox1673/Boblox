@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boblox - Home</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg" type="image/jpg">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Pasek boczny -->
+    <nav class="sidebar">
+        <div class="logo">Roblox</div>
+        <a href="home.html">Home</a>
+        <a href="#">Discover</a>
+        <a href="avatar.html">Avatar</a>
+        <a href="chat.html">Messages</a>
+        <a href="profile.html">Profile</a>
+        <a href="settings.html">Settings</a>
+        <a href="robux.html">Buy Bobux</a>
+        <a href="Prem.html" class="premium-sidebar-btn">Premium</a>
+
+    </nav>
+
+    <!-- Główny kontent -->
+    <div class="main">
+        <!-- Górny pasek -->
+<header class="topbar">
+    <!-- Pole wyszukiwania -->
+    <input type="text" placeholder="Search" class="search-box">
+
+    <!-- Środek: Robux -->
+    <div class="currency">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Robux_2019_Logo_gold.svg/1024px-Robux_2019_Logo_gold.svg.png?20201227051146" alt="Robux" class="robux-icon">
+        <span class="robux-amount">0</span>
+    </div>
+
+    <!-- Prawa strona: avatar + wyloguj -->
+    <div class="user-info">
+        <span class="username">Wiktor</span>
+        <a href="avatar.html">
+            <div class="avatar"></div>
+        </a>
+        <button class="logout-btn">Wyloguj</button>
+    </div>
+</header>
+
+        <div class="container-header people-list-header"><h2>Connections<span class="friends-count"></span></h2><a href="https://www.gówno" class="btn-secondary-xs btn-more see-all-link-icon">See All</a></div>
+        <div class="add-friend-circle" onclick="goToAddFriend()">
+  <a href="Znaj.html" class="add-friend-circle">
+  <img src="https://static.vecteezy.com/system/resources/previews/009/392/103/original/button-plus-icon-sign-symbol-design-free-png.png" alt="Przyjaciel" class="friend-icon">
+  <span>Dodaj znajomego</span>
+</a>
+
+</div>
+
+        <h1>Recommended Games</h1>
+        <div class="games">
+            <div class="game-card">
+                <img src="https://static.deltiasgaming.com/2025/01/Untitled-design-2025-01-25T180708.927.jpg" alt="Game 1">
+                <h3>Brookhaven RP</h3>
+                 <button class="play-btn">Play</button>
+            </div>
+            <div class="game-card">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.sniv_ce-B_H8mrRUo1MFCgHaEm?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Game 2">
+                <h3>Adopt me</h3>
+                <button class="play-btn">Play</button>
+            </div>
+            <div class="game-card">
+                <img src="https://newsd.in/wp-content/uploads/2025/04/Roblox-Blox-Fruits-Update-26.jpg" alt="Game 3">
+                <h3>Blox fruit</h3>
+                <button class="play-btn">Play</button>
+            </div>
+            <div class="game-card">
+                <img src="https://tr.rbxcdn.com/180DAY-d554427c511c2bdc1db9a11e47bdb821/500/280/Image/Jpeg/noFilter" alt="Game 4">
+                <h3>Martwe Szyny</h3>
+                <button class="play-btn">Play</button>
+            </div>
+        </div>
+         <!-- Panel Admina -->
+    <div class="admin-panel">
+      <h2>Panel Admina</h2>
+      <input type="text" id="admin-username" placeholder="Wpisz nazwę użytkownika">
+      <div class="admin-buttons">
+        <button class="btn admin-btn" onclick="banUser()">Ban</button>
+        <button class="btn admin-btn" onclick="kickUser()">Kick</button>
+        <button class="btn admin-btn" onclick="timeoutUser()">Timeout</button>
+        <button class="btn admin-btn" onclick="resetUserPassword()">Reset Hasła</button>
+        <button class="btn admin-btn" onclick="deleteUser()">Usuń Konto</button>
+      </div>
+      <div id="admin-log" class="admin-log"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Ukrycie panelu admina jeśli nie Admin
+    document.addEventListener("DOMContentLoaded", () => {
+      const session = getSession();
+      const adminPanel = document.querySelector(".admin-panel");
+      if (!session || session.username !== "Admin") {
+        if (adminPanel) adminPanel.style.display = "none";
+      }
+    });
+  </script>
+    </div>
+</body>
+</html>

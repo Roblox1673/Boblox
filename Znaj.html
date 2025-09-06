@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Boblox - Friend</title>
+   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg" type="image/jpg">
+  <link rel="stylesheet" href="Znaj.css">
+</head>
+<body class="znaj-body">
+
+  <div class="znaj-container">
+    <h1>Dodaj znajomego</h1>
+
+    <div class="add-friend-form">
+      <input type="text" id="friend-username" placeholder="Wpisz nazwę użytkownika">
+      <button class="btn add-btn" onclick="addFriend()">Dodaj</button>
+    </div>
+
+    <div class="friends-list">
+      <h2>Twoi znajomi</h2>
+      <div id="friends-container" class="friends-container">
+        <!-- Lista znajomych będzie wstawiana dynamicznie przez JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boblox - Premium</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg" type="image/jpg">
+    <link rel="stylesheet" href="Prem.css">
+</head>
+<body>
+    <!-- Pasek boczny -->
+    <nav class="sidebar">
+        <div class="logo">Roblox</div>
+        <a href="#">Home</a>
+        <a href="#">Discover</a>
+        <a href="avatar.html">Avatar</a>
+        <a href="#">Messages</a>
+        <a href="profile.html">Profile</a>
+        <a href="settings.html">Settings</a>
+        <a href="robux.html">Buy Bobux</a>
+        <a href="#" class="premium-sidebar-btn">Premium</a>
+    </nav>
+
+    <!-- Główny kontent -->
+    <div class="main">
+        <!-- Górny pasek -->
+        <header class="topbar">
+            <input type="text" placeholder="Search" class="search-box">
+            <div class="currency">
+                <span class="robux-amount">0</span>
+            </div>
+            <div class="user-info">
+                <span class="username">Wiktor</span>
+                <a href="avatar.html"><div class="avatar"></div></a>
+                <button class="logout-btn">Wyloguj</button>
+            </div>
+        </header>
+
+        <!-- Sekcja Premium -->
+        <main class="premium-main">
+            <h1>GameBoblox Premium</h1>
+            <p>Kup Premium, aby odblokować wszystkie funkcje!</p>
+
+            <section class="premium-features">
+                <h2>Korzyści Premium</h2>
+                <ul>
+                    <li>🎮 Dostęp do unikalnych gier</li>
+                    <li>💎 Specjalne przedmioty w grze</li>
+                    <li>🚀 Szybszy progres</li>
+                    <li>🌟 Status Premium w profilu</li>
+                </ul>
+            </section>
+
+            <section class="purchase">
+                <h2>Kup teraz!</h2>
+                <button id="buy-premium">Kup Premium</button>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('buy-premium').addEventListener('click', () => {
+            alert("Gratulacje! Teraz jesteś premium!");
+            localStorage.setItem('premium', 'true');
+        });
+    </script>
+</body>
+</html>
